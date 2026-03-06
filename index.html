@@ -8,11 +8,17 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
   <link href="styles.css" rel="stylesheet">
     <title>Simply Jens Cleaning</title>
 </head>
 <body> 
+
+    <div class="container_banner">
+        <a href="#" class="banner_text rotating_banner">
+ New Client Offer: $250 Standard Cleaning + FREE Fridge Cleaning | Book Today
+        </a>
+        </div>
+    <br>
     <header>
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
@@ -70,120 +76,193 @@
     <button type="button" class="btn btn-outline-primary">Book Us </button>
     </div>
 </section>
+<br style="border: 10px solid var(--color-third);"/>
+
+<section class="second_part">
+    <div class="container-fluid px-0 second_part ">
+        <div class="transparent-box p-5 my-5 border">
+÷        <h1 id="light_text"> Why Choose Us?</h1>
+        <p id="light_text">At Simply Jens Cleaning, we are committed to providing exceptional cleaning services that exceed our customers' expectations. Here are some reasons why you should choose us for your cleaning needs:</p>
+        <ul id="light_text">
+            <li>Experienced and Professional Team: Our team of cleaners is highly trained, experienced, and dedicated to delivering top-quality cleaning services.</li>
+            <li>Customized Cleaning Solutions: We understand that every home and office is unique, which is why we offer customized cleaning solutions tailored to your specific needs.</li>
+            <li>Eco-Friendly Cleaning Products: We use environmentally friendly cleaning products that are safe for you, your family, and the environment.</li>
+            <li>Attention to Detail: We pay close attention to every detail to ensure that your space is thoroughly cleaned and sanitized.</li>
+            <li>Flexible Scheduling: We offer flexible scheduling options to accommodate your busy lifestyle.</li>
+            <li>Competitive Pricing: We provide high-quality cleaning services at competitive prices, ensuring you get the best value for your money.</li>
+        </ul>
+        </div>
+    </div>
+</section>
 
 <section class="show_services">
-    <div class="container-lg">
-    <h1 id="light_text"> Our Services </h1>
+    <div class="container-fluid px-0">
+        <h1 id="light_text"> House Cleaning</h1>
     </div>
-    <div class="row">
-  <div class="card" style="width:400px">
-    <img class="card-img-top" src="images/RC_ICONS.png" alt="Card image" style="width:100%">
-    <div class="card-body">
-      <h4 class="card-title">Regular Cleaning</h4>
-      <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
-      <a href="#" class="book-btn btn btn-primary stretched-link">Book</a>
+
+   <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+
+  <div class="carousel-inner">
+
+    <!-- Regular Cleaning -->
+    <div class="carousel-item active">
+      <div class="cards-wrapper">
+        <div class="card" style="width:400px;">
+          <img class="card-img-top" src="images/RC_ICONS.png" alt="Regular Cleaning">
+          <div class="card-body text-center">
+            <h4 class="card-title">Regular Cleaning</h4>
+            <p class="card-text">
+              Routine cleaning to keep your home fresh and spotless.
+            </p>
+            <a href="#" class="btn btn-primary">Book</a>
+          </div>
+        </div>
+      </div>
     </div>
+
+    <!-- Deep Cleaning -->
+    <div class="carousel-item">
+      <div class="cards-wrapper">
+        <div class="card" style="width:400px;">
+          <img class="card-img-top" src="images/DEEPCLEAN_ICONS.png" alt="Deep Cleaning">
+          <div class="card-body text-center">
+            <h4 class="card-title">Deep Cleaning</h4>
+            <p class="card-text">
+              Detailed top-to-bottom cleaning for a deeper refresh.
+            </p>
+            <a href="#" class="btn btn-primary">Book</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Housekeeping -->
+    <div class="carousel-item">
+      <div class="cards-wrapper">
+        <div class="card" style="width:400px;">
+          <img class="card-img-top" src="images/DISHES_ICONS.png" alt="Housekeeping">
+          <div class="card-body text-center">
+            <h4 class="card-title">Housekeeping</h4>
+            <p class="card-text">
+              Ongoing home support including tidying, dishes, and upkeep.
+            </p>
+            <a href="#" class="btn btn-primary">Book</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Move In / Move Out -->
+    <div class="carousel-item">
+      <div class="cards-wrapper">
+        <div class="card" style="width:400px;">
+          <img class="card-img-top" src="images/VACCUMMING_ICONS.png" alt="Move In Move Out">
+          <div class="card-body text-center">
+            <h4 class="card-title">Move-In / Move-Out</h4>
+            <p class="card-text">
+              Thorough cleaning to prepare your space before or after moving.
+            </p>
+            <a href="#" class="btn btn-primary">Book</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 
+  <!-- Controls -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
 
-  
-    
-  <div class="card" style="width:400px">
-    <img class="card-img-top" src="images/DEEPCLEAN_ICONS.png" alt="Card image" style="width:100%">
-    <div class="card-body">
-      <h4 class="card-title">Deep Cleaning</h4>
-      <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
-      <a href="#" class="btn btn-primary stretched-link">Book</a>
-    </div>
-  </div>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
 
-
- 
-   
-  <div class="card" style="width:400px">
-    <img class="card-img-top" src="images/DISHES_ICONS.png" alt="Card image" style="width:100%">
-    <div class="card-body">
-      <h4 class="card-title">Housekeeping</h4>
-      <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
-      <a href="#" class="btn btn-primary stretched-link">Book</a>
-    </div>
-  </div>
-
-
-   
-  <div class="card" style="width:400px">
-    <img class="card-img-top" src="images/VACCUMMING_ICONS.png" alt="Card image" style="width:100%">
-    <div class="card-body">
-      <h4 class="card-title">Move-In/Move-out</h4>
-      <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
-      <a href="#" class="btn btn-primary stretched-link">Book</a>
-    </div>
-  </div>
 </div>
 </section>
 
-<section>
-    <h1> Hours</h1>
- <div class="col-6 col-md-2 mb-3">
-                    <h5>Hours</h5>
-                    <ul class="nav flex-column">
-                        <li class="nav-item mb-2">
-                            <a href="#" class="nav-link p-0 text-body-secondary">Monday</a>
-                        </li>
-                        <li class="nav-item mb-2">
-                            <a href="#" class="nav-link p-0 text-body-secondary">Tuesday</a>
-                        </li>
-                        <li class="nav-item mb-2">
-                            <a href="#" class="nav-link p-0 text-body-secondary">Wednesday</a>
-                        </li>
-                        <li class="nav-item mb-2">
-                            <a href="#" class="nav-link p-0 text-body-secondary">Thursday</a>
-                        </li>
-                        <li class="nav-item mb-2">
-                            <a href="#" class="nav-link p-0 text-body-secondary">Friday</a>
-                        </li>
-                        <li class="nav-item mb-2">
-                            <a href="#" class="nav-link p-0 text-body-secondary">Saturday</a>
-                        </li>
-                        <li class="nav-item mb-2">
-                            <a href="#" class="nav-link p-0 text-body-secondary">Sunday</a>
-                        </li>
-                        
-            </ul>
-        </div>
-        <div class="col-6 col-md-2 mb-3">
-        <h5>hou</h5>
-            <ul class="nav flex-column">
-                <li class="nav-item mb-2">
-                    <a href="#" class="nav-link p-0 text-body-secondary">9:30 am - 8:00 pm</a>
-                </li>
-                <li class="nav-item mb-2">
-                    <a href="#" class="nav-link p-0 text-body-secondary">9:30 am - 8:00 pm</a>
-                </li>
-                <li class="nav-item mb-2">
-                    <a href="#" class="nav-link p-0 text-body-secondary">9:30 am - 8:00 pm</a>
-                </li>
-                <li class="nav-item mb-2">
-                    <a href="#" class="nav-link p-0 text-body-secondary">9:30 am - 8:00 pm</a>
-                </li>
-              <li class="nav-item mb-2">
-                  <a href="#" class="nav-link p-0 text-body-secondary">9:30 am - 8:00 pm</a>
-                </li>
-                <li class="nav-item mb-2">
-                            <a href="#" class="nav-link p-0 text-body-secondary">9:30 am - 8:00 pm</a>
-                        </li>
-                        <li class="nav-item mb-2">
-                            <a href="#" class="nav-link p-0 text-body-secondary">9:30 am - 8:00 pm</a>
-                        </li>
-            </ul>
-        </div>
 
+
+<section class="third_part">
+    <div class="third container-fluid px-0">
+
+    <h1 class="hour_title text-center">Hours of Operation</h1>
+
+    <div class="hours_container">
+                    
+    <div class="hours-card p-5 my-5 border">
+
+        <div class="card-content">
+
+        <div class="icon-side">
+            <div class="icon-badge">
+         <img src="images/CLOCK_ICONS.png" alt="clock" class="clock_icon" width="500" height="500">
+         </div>
+        </div>
+                
+         <div class="text-side">
+                            <span class="hour_day">Monday - Friday </span>
+                            <span class="hour_time">9:30 am - 6:00 pm</span>
+                            <span class="hour_day">Saturday - Sunday </span>
+                            <span class="hour_time">9:30 am - 5:00 pm</span>
+            <p class="hour_text">Open 7 days a week with flexible scheduling.</p>
+            <p class="hour_text">For special or overnight cleans, call/text<span class="phone">(613) 697 - 6389</span> to arrange it! </p>
+        </div>
+        </div>
+    </div>
+
+ <div class="location-card p-5 my-5 border">
+   
+    <div class="card-content">
+
+    <div class="icon-side">
+        <div class="icon-badge">
+    <img src="images/PIN_LOCATION_ICONS.png" alt="location" class="location_icon" width="500" height="500">
+    </div>
+    </div>
+        
+    <div class="text-side">
+            <p class="location_text">We proudly serve the Ottawa and Gatineau areas, providing top-quality cleaning services to our valued customers.</p>
+            <p class="location_text">Contact us today to schedule your cleaning service and experience the difference of <strong>Simply Jens Cleaning!</strong></p>
+    </div>
+    </div>
+ </div>
+    </div>
+    </div>
 </section>
+
 <section>
-    <h1>Reviews</h1>
+    <h1 class="title_reviews">Reviews</h1>
+
+    <div class="container_reviews">
+        <div class="bubble">
+            <div class="reviews">
+                <h2> ⭐⭐⭐⭐⭐ </h2>
+                <p class="text_reviews">My home has never been so clean!
+Baseboards, door frames, walls, window sills included - just an amazing job. I would recommend the two Jens! I felt safe having them in my home. </p>
+                <a href="#">- Adele</a>
+            </div>
+        </div>
+        <div class="bubble">
+            <div class="reviews">
+                <h2>⭐⭐⭐⭐⭐</h2>
+                <p class="text_reviews"> Omg you guys!! What an amazing job downstairs! 🙌🏻 😊 Thank youuuu</p>
+                <a href="#">- Mia</a>
+            </div>
+        </div>
+            <div class="bubble">
+                <div class="reviews">
+                    <h2> ⭐⭐⭐⭐⭐ </h2>
+                    <p class="text_reviews"> I have been using Simply Jens Cleaning for a few months now and I am extremely satisfied with their services. They are reliable, efficient, and do an excellent job. I highly recommend them to anyone in need of cleaning services.</p>
+                    <a href="#">- Sarah</a>
+                </div>
+            </div>
+    </div>
 </section>
 <hr>
 <div class="">
+   
     
     <footer class ="py-5">
         <div class="col-4 col-md-2 mb-2">
@@ -275,7 +354,7 @@
     <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
     <p>&copy; 2026 Simply Jens Cleaning, Inc. All rights reserved.</p>
     <ul class="list-unstyled d-flex">
-        <li class="ms-3"> 
+        <li class="ms-3 legal_links"> 
                 <a href="#" class="nav-link">Privacy Policy</a>
                 <a href="#" class="nav-link">Terms of Use</a>
                 <a href="#" class="nav-link">Legal</a>
@@ -285,10 +364,9 @@
     </div>
 
 </footer>
-    <script
-      src="../assets/dist/js/bootstrap.bundle.min.js"
-      class="astro-vvvwv3sm"
-    ></script>
+    <!-- <script src="../assets/dist/js/bootstrap.bundle.min.js" class="astro-vvvwv3sm"></script> -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
   </body>
 </html>
 
