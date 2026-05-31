@@ -1,3 +1,4 @@
+console.log("Analytics loaded");
 
 /* business type selection */
 
@@ -31,6 +32,72 @@ businessType.addEventListener("change", function () {
     otherBusinessField.style.display = "none";
   }
 });
+
+// process section of the code
+
+
+const reveals = document.querySelectorAll(".reveal");
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add("active");
+    }
+  });
+});
+
+reveals.forEach(el => observer.observe(el));
+
+
+// mini contact form code
+
+
+document.querySelectorAll('.person-btn').forEach(btn => {
+  btn.addEventListener('click', function(){
+    const options = this.nextElementSibling;
+    options.style.display = options.style.display === 'flex' ? 'none' : 'flex';
+  });
+});
+
+// badge section of the code 
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  const counters = document.querySelectorAll(".counter");
+
+  const runCounter = (counter) => {
+    const target = Number(counter.dataset.target);
+    const suffix = counter.dataset.suffix || "";
+    let current = 0;
+    const increment = target / 60;
+
+    const update = () => {
+      current += increment;
+
+      if (current < target) {
+        counter.textContent = Math.ceil(current) + suffix;
+        requestAnimationFrame(update);
+      } else {
+        counter.textContent = target + suffix;
+      }
+    };
+
+    update();
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !entry.target.classList.contains("counted")) {
+        entry.target.classList.add("counted");
+        runCounter(entry.target);
+      }
+    });
+  }, { threshold: 0.5 });
+
+  counters.forEach(counter => observer.observe(counter));
+
+});
+
 
 // review section of the code
 
@@ -133,6 +200,21 @@ prevBtn.addEventListener("click", () => {
 
 renderReviews();
 
+// payment trusted section of the code
+
+const revealElements = document.querySelectorAll(".reveal");
+
+const revealOnScroll = () => {
+  revealElements.forEach(el => {
+    const rect = el.getBoundingClientRect();
+
+    if (rect.top < window.innerHeight - 100) {
+      el.classList.add("active");
+    }
+  });
+};
+
+window.addEventListener("scroll", revealOnScroll);
 
 /* FAQ section of the code  */
 
