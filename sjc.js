@@ -285,3 +285,9 @@ window.addEventListener("load", function () {
     }
   });
 });
+
+// prevent from copying code from the website
+
+document.addEventListener('contextmenu', event => {
+    event.preventDefault();
+});
