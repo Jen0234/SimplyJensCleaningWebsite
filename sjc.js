@@ -291,3 +291,4 @@ window.addEventListener("load", function () {
 document.addEventListener('contextmenu', event => {
     event.preventDefault();
 });
+

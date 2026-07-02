@@ -2428,3 +2428,559 @@ img.logolight {
 .popup-btn:hover{
   background: var(--color-first);
 }
+
+
+/* DEEP CLEAN SECTION */
+
+/* Left image container */
+.deep-clean-image{
+flex: 1.4;
+overflow: visible;
+text-align: center;
+}
+
+/* Make PNG appear much larger */
+.deep-clean-image img{
+width: 140%;
+max-width: none;
+height: auto;
+display: block;
+margin-left: -15%;
+transform: scale(1.15);
+}
+
+/* Main section */
+.deep-clean-section{
+display: flex;
+align-items: center;
+justify-content: space-between;
+gap: 80px;
+padding: 250px 8% 100px;
+background-color: var(--color-second);
+overflow: hidden;
+}
+
+/* Right content */
+.deep-clean-content{
+flex: 1;
+}
+
+.service-label{
+color: var(--color-first);
+font-weight: 700;
+letter-spacing: 2px;
+text-transform: uppercase;
+}
+
+.deep-clean-content h2{
+font-size: 4rem;
+color: var(--color-first);
+margin: 15px 0 25px;
+}
+
+.deep-clean-content p{
+font-size: 1.2rem;
+line-height: 1.8;
+margin-bottom: 30px;
+}
+
+.deep-clean-list{
+list-style: none;
+padding: 0;
+margin-bottom: 40px;
+}
+
+.deep-clean-list li{
+margin-bottom: 15px;
+font-size: 1.1rem;
+position: relative;
+padding-left: 35px;
+}
+
+.deep-clean-list li::before{
+content: "✔";
+position: absolute;
+left: 0;
+color: var(--color-first);
+font-weight: bold;
+}
+
+.deep-clean-btn{
+display: inline-block;
+background: var(--color-first);
+color: white;
+padding: 16px 36px;
+border-radius: 12px;
+text-decoration: none;
+font-weight: 600;
+transition: 0.3s ease;
+}
+
+.deep-clean-btn:hover{
+background-color: var(--color-second);
+transform: translateY(-2px);
+}
+.deep-clean-buttons{
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.deep-clean-btn{
+    display:inline-block;
+    background:var(--color-first);
+    color:white;
+    padding:16px 36px;
+    border-radius:12px;
+    text-decoration:none;
+    font-weight:600;
+    transition:0.3s ease;
+}
+
+.deep-clean-btn:hover{
+    background-color:var(--color-second);
+}
+
+.pdf-btn{
+  color: var(--color-first);
+    background:var(--color-second);
+    outline: var(--color-first) solid 2px;
+}
+
+.pdf-btn:hover{
+  color: var(--color-second);
+    background:var(--color-first);
+}
+
+/* TABLET */
+
+@media (max-width: 992px){
+
+
+.deep-clean-section{
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+}
+
+.deep-clean-image img{
+    width: 100%;
+    margin-left: 0;
+    transform: scale(1);
+}
+
+.deep-clean-content h2{
+    font-size: 2.8rem;
+}
+
+.deep-clean-list li{
+    text-align: left;
+}
+
+
+}
+
+/* MOBILE */
+
+@media (max-width: 768px){
+
+
+.deep-clean-section{
+    padding: 70px 6%;
+}
+
+.deep-clean-content h2{
+    font-size: 2.2rem;
+}
+
+.deep-clean-content p{
+    font-size: 1rem;
+}
+
+
+}
+
+/* move in and move out code of the code */
+
+/* MOVE-IN / MOVE-OUT HERO */
+
+.move-clean-hero{
+    min-height: 900px;
+
+    background-image: url("images/Move-In:Out\ Cleaning.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+
+    padding: 120px 8%;
+    margin: 0 0 80px ;
+}
+
+.move-clean-card{
+    width: 650px;
+
+    background: rgba(255,255,255,0.95);
+
+    padding: 50px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,.15);
+}
+
+.move-clean-card h2{
+    font-size: 4rem;
+    color: var(--color-first);
+    margin: 15px 0 25px;
+    line-height: 1.1;
+}
+
+.move-clean-card p{
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.move-clean-list{
+    list-style: none;
+    padding: 0;
+    margin-bottom: 40px;
+}
+
+.move-clean-list li{
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.move-clean-list li::before{
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: var(--color-first);
+    font-weight: bold;
+}
+
+.move-clean-actions{
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.move-clean-btn{
+    background: var(--color-first);
+    color: white;
+    padding: 16px 36px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.move-clean-download{
+    border: 2px solid var(--color-first);
+    color: var(--color-first);
+    padding: 16px 36px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.move-clean-btn:hover{
+    background: var(--color-second);
+}
+
+.move-clean-download:hover{
+    background: var(--color-first);
+    color: white;
+}
+
+/* MOBILE */
+
+@media(max-width: 768px){
+
+    .move-clean-card{
+        width: 100%;
+        padding: 35px;
+    }
+
+    .move-clean-card h2{
+        font-size: 2.5rem;
+    }
+
+    .move-clean-actions{
+        flex-direction: column;
+    }
+}
+
+
+
+/* Standard Cleaning Services Section of the code  */
+
+.standard-hero{
+    min-height:100vh;
+    padding:120px 6%;
+    display:flex;
+    align-items:center;
+    justify-content:flex-start;
+
+    background:
+        linear-gradient(rgba(29,67,85,.20),rgba(29,67,85,.20)),
+        url("images/luxury\ house.png");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    border:18px solid #F4F6F9;
+    border-radius:30px;
+}
+
+.standard-overlay{
+    width:650px;
+    padding:60px;
+    background:rgba(255,255,255,.88);
+    backdrop-filter:blur(20px);
+    border-radius:28px;
+    box-shadow:0 20px 60px rgba(0,0,0,.15);
+}
+
+.standard-overlay h1{
+    font-size:5rem;
+    color:var(--color-first);
+    margin:15px 0 25px;
+    line-height:1;
+}
+
+.standard-overlay p{
+    font-size:1.15rem;
+    line-height:1.9;
+    margin-bottom:40px;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:25px;
+    margin-top:40px;
+}
+
+.hero-card{
+    flex:1;
+    position:relative;
+    overflow:hidden;
+    border-radius:18px;
+    text-decoration:none;
+}
+
+.hero-card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    display:block;
+}
+
+.card-tag{
+    position:absolute;
+    top:18px;
+    left:18px;
+
+    background:rgba(255,255,255,.92);
+    color:var(--color-first);
+
+    padding:10px 18px;
+    border-radius:50px;
+
+    font-weight:700;
+    z-index:2;
+}
+
+.hero-card:hover{
+    transform:translateY(-8px);
+    transition:.3s;
+}
+
+.standard-actions{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+    margin-top:45px;
+}
+
+.standard-action-btn,
+.standard-download-btn{
+
+    padding:18px 35px;
+
+    background:#F4F6F9;
+
+    color:var(--color-first);
+
+    text-decoration:none;
+
+    border-radius:16px;
+
+    font-weight:700;
+
+    transition:.35s ease;
+
+    border:2px solid transparent;
+
+    cursor:pointer;
+}
+
+/* Hover */
+
+.standard-action-btn:hover,
+.standard-download-btn:hover{
+
+    background:#1D4355;
+
+    color:white;
+
+    transform:translateY(-5px);
+
+    box-shadow:0 15px 35px rgba(29,67,85,.25);
+}
+
+/* While clicking */
+
+.standard-action-btn:active,
+.standard-download-btn:active{
+
+    transform:scale(.96);
+
+    background:#1D4355;
+
+}
+/* ==========================================
+   STANDARD CLEANING BUTTONS
+========================================== */
+
+.standard-actions{
+
+    display:flex;
+    justify-content:flex-start;
+    align-items:center;
+
+    gap:20px;
+
+    margin-top:45px;
+
+    flex-wrap:wrap;
+}
+
+/* Main Buttons */
+
+.standard-action-btn{
+
+    background:#F4F6F9;
+
+    color:#1D4355;
+
+    text-decoration:none;
+
+    padding:18px 36px;
+
+    border-radius:18px;
+
+    font-size:1rem;
+
+    font-weight:700;
+
+    border:2px solid transparent;
+
+    transition:all .35s ease;
+
+    box-shadow:
+        0 8px 20px rgba(0,0,0,.08);
+
+}
+
+/* Download Button */
+
+.standard-download-btn{
+
+    background:#F4F6F9;
+
+    color:#1D4355;
+
+    text-decoration:none;
+
+    padding:18px 36px;
+
+    border-radius:18px;
+
+    font-size:1rem;
+
+    font-weight:700;
+
+    border:2px solid transparent;
+
+    transition:all .35s ease;
+
+    box-shadow:
+        0 8px 20px rgba(0,0,0,.08);
+
+}
+
+/* Hover Effect */
+
+.standard-action-btn:hover,
+.standard-download-btn:hover{
+
+    background:#1D4355;
+
+    color:#FFFFFF;
+
+    transform:
+        translateY(-6px)
+        scale(1.02);
+
+    box-shadow:
+        0 18px 40px rgba(29,67,85,.35);
+
+}
+
+/* Click Effect */
+
+.standard-action-btn:active,
+.standard-download-btn:active{
+
+    transform:scale(.97);
+
+}
+
+/* Focus */
+
+.standard-action-btn:focus,
+.standard-download-btn:focus{
+
+    outline:none;
+
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+    .standard-actions{
+
+        flex-direction:column;
+
+        align-items:stretch;
+
+    }
+
+    .standard-action-btn,
+    .standard-download-btn{
+
+        width:100%;
+
+        text-align:center;
+
+    }
+
+}
