@@ -236,33 +236,42 @@ for (i = 0; i < acc.length; i++) {
 
 // footer of the code 
 
+/* Business Hours */
 
-function updateStatus() {
-  const status = document.querySelector('.footer-status');
-  const now = new Date();
-  const hour = now.getHours();
-  const minutes = now.getMinutes();
+const status = document.getElementById("businessStatus");
+const hours = document.getElementById("businessHoursText");
+const dot = document.querySelector(".status-dot");
 
-  // Convert time to decimal (e.g. 9:30 = 9.5)
-  const currentTime = hour + minutes / 60;
+if (status && hours && dot) {
 
-  const openTime = 9.5;   // 9:30 AM
-  const closeTime = 20.5; // 8:30 PM
+    const now = new Date();
 
-  if (currentTime >= openTime && currentTime < closeTime) {
-    status.classList.add('open');
-    status.classList.remove('closed');
-    status.innerHTML = '<span></span> Open Now';
-  } else {
-    status.classList.add('closed');
-    status.classList.remove('open');
-    status.innerHTML = '<span></span> Closed';
-    status.innerHTML = '<span></span> Open • Closes at 8:30 PM';
-    status.innerHTML = '<span></span> Closed • Opens at 9:30 AM';
-  }
+    const currentTime = now.getHours() + now.getMinutes() / 60;
+
+    const openTime = 9.5;   // 9:30 AM
+    const closeTime = 20.5; // 8:30 PM
+
+    if (currentTime >= openTime && currentTime < closeTime) {
+
+        status.textContent = "🟢 Open Now";
+        hours.textContent = "Until 8:30 PM • Same-Day Response";
+
+        dot.style.background = "#22c55e";
+
+    } else {
+
+        status.textContent = "🔴 Closed";
+
+        if (currentTime < openTime) {
+            hours.textContent = "Opens Today at 9:30 AM";
+        } else {
+            hours.textContent = "Opens Tomorrow at 9:30 AM";
+        }
+
+        dot.style.background = "#ef4444";
+    }
+
 }
-
-updateStatus();
 
 // pop-up code 
 
