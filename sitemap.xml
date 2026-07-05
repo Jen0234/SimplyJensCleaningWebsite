@@ -1,49 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
-
-  <url>
-    <loc>https://simplyjenscleaning.com/</loc>
-    <priority>1.0</priority>
-  </url>
-
-  <url>
-    <loc>https://simplyjenscleaning.com/about.html</loc>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://simplyjenscleaning.com/reviews.html</loc>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://simplyjenscleaning.com/contact.html</loc>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://simplyjenscleaning.com/standard-cleaning-ottawa.html</loc>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://simplyjenscleaning.com/deep-cleaning-ottawa.html</loc>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://simplyjenscleaning.com/move-out-cleaning-ottawa.html</loc>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://simplyjenscleaning.com/housekeeping-ottawa.html</loc>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://simplyjenscleaning.com/commercial-cleaning-ottawa.html</loc>
-    <priority>0.9</priority>
-  </url>
-
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://www.simplyjenscleaning.com/home.html</loc></url>
+  <url><loc>https://www.simplyjenscleaning.com/standard-cleaning-ottawa.html</loc></url>
+  <url><loc>https://www.simplyjenscleaning.com/deep-cleaning-ottawa.html</loc></url>
+  <url><loc>https://www.simplyjenscleaning.com/move-in-move-out-cleaning-ottawa.html</loc></url>
+  <url><loc>https://www.simplyjenscleaning.com/housekeeping-ottawa.html</loc></url>
+  <url><loc>https://www.simplyjenscleaning.com/commercial-cleaning-ottawa.html</loc></url>
+  <url><loc>https://www.simplyjenscleaning.com/airbnb-cleaning-ottawa.html</loc></url>
+  <url><loc>https://www.simplyjenscleaning.com/about-us.html</loc></url>
+  <url><loc>https://www.simplyjenscleaning.com/blog.html</loc></url>
+  <url><loc>https://www.simplyjenscleaning.com/contact-us.html</loc></url>
+  <url><loc>https://www.simplyjenscleaning.com/privacy-policy.html</loc></url>
+  <url><loc>https://www.simplyjenscleaning.com/terms-and-conditions.html</loc></url>
+  <url><loc>https://www.simplyjenscleaning.com/terms-of-use.html</loc></url>
+  <url><loc>https://www.simplyjenscleaning.com/cancellation-rescheduling-policy.html</loc></url>
+  <url><loc>https://www.simplyjenscleaning.com/satisfaction-guarantee.html</loc></url>
+  <url><loc>https://www.simplyjenscleaning.com/cookie-policy.html</loc></url>
+  <url><loc>https://www.simplyjenscleaning.com/accessibility-statement.html</loc></url>
+  <url><loc>https://www.simplyjenscleaning.com/policies.html</loc></url>
+  <url><loc>https://www.simplyjenscleaning.com/legal.html</loc></url>
 </urlset>
