@@ -2040,6 +2040,8 @@ ul.promise-list {
 
 
 /* FAQ section of the code  */
+/* FAQ section */
+
 .faq_section {
   background-color: var(--color-second);
   width: 100%;
@@ -2067,22 +2069,23 @@ ul.promise-list {
 }
 
 .faq {
-  background-color: var(--color-second);
+  background-color: #fff;
   color: var(--color-third);
   cursor: pointer;
   padding: 18px 50px 18px 18px;
   width: 100%;
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(29, 67, 85, 0.12);
   text-align: left;
   outline: none;
   font-size: 15px;
-  transition: 0.4s;
+  font-weight: 700;
+  transition: 0.3s ease;
   position: relative;
   border-radius: 12px;
 }
 
-.active,
-.faq:hover {
+.faq:hover,
+.faq.active {
   background-color: var(--color-third);
   color: var(--color-second);
 }
@@ -2093,7 +2096,7 @@ ul.promise-list {
   color: var(--color-first);
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.25s ease-out;
+  transition: max-height 0.3s ease;
   border-radius: 0 0 12px 12px;
   margin-top: 6px;
 }
@@ -2104,8 +2107,8 @@ ul.promise-list {
   margin: 0;
 }
 
-.faq:after {
-  content: '\02795';
+.faq::after {
+  content: "\02795";
   font-size: 13px;
   color: currentColor;
   position: absolute;
@@ -2114,7 +2117,7 @@ ul.promise-list {
   transform: translateY(-50%);
 }
 
-.faq.active:after {
+.faq.active::after {
   content: "\2796";
 }
 
