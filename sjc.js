@@ -1,231 +1,177 @@
-console.log("Analytics loaded");
+console.log("SJC JavaScript loaded");
 
-/* business type selection */
+document.addEventListener("DOMContentLoaded", function () {
 
-const serviceSelect = document.getElementById("serviceSelect");
-const residentialFields = document.getElementById("residentialFields");
-const commercialFields = document.getElementById("commercialFields");
+  /* Business type selection */
+  const serviceSelect = document.getElementById("serviceSelect");
+  const residentialFields = document.getElementById("residentialFields");
+  const commercialFields = document.getElementById("commercialFields");
 
-const businessType = document.getElementById("businessType");
-const otherBusinessField = document.getElementById("otherBusinessField");
+  if (serviceSelect && residentialFields && commercialFields) {
+    const residentialServices = ["standard", "deep", "move", "housekeeping", "airbnb"];
+    const commercialServices = ["commercial"];
 
-const residentialServices = ["standard", "deep", "move", "housekeeping", "airbnb"];
-const commercialServices = ["commercial"];
-
-serviceSelect.addEventListener("change", function () {
-  if (residentialServices.includes(this.value)) {
-    residentialFields.style.display = "block";
-    commercialFields.style.display = "none";
-  } else if (commercialServices.includes(this.value)) {
-    residentialFields.style.display = "none";
-    commercialFields.style.display = "block";
-  } else {
-    residentialFields.style.display = "none";
-    commercialFields.style.display = "none";
-  }
-});
-
-businessType.addEventListener("change", function () {
-  if (this.value === "other") {
-    otherBusinessField.style.display = "block";
-  } else {
-    otherBusinessField.style.display = "none";
-  }
-});
-
-// process section of the code
-
-
-const reveals = document.querySelectorAll(".reveal");
-
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if(entry.isIntersecting){
-      entry.target.classList.add("active");
-    }
-  });
-});
-
-reveals.forEach(el => observer.observe(el));
-
-
-// mini contact form code
-
-
-document.querySelectorAll('.person-btn').forEach(btn => {
-  btn.addEventListener('click', function(){
-    const options = this.nextElementSibling;
-    options.style.display = options.style.display === 'flex' ? 'none' : 'flex';
-  });
-});
-
-// badge section of the code 
-
-document.addEventListener("DOMContentLoaded", () => {
-
-  const counters = document.querySelectorAll(".counter");
-
-  const runCounter = (counter) => {
-    const target = Number(counter.dataset.target);
-    const suffix = counter.dataset.suffix || "";
-    let current = 0;
-    const increment = target / 60;
-
-    const update = () => {
-      current += increment;
-
-      if (current < target) {
-        counter.textContent = Math.ceil(current) + suffix;
-        requestAnimationFrame(update);
+    serviceSelect.addEventListener("change", function () {
+      if (residentialServices.includes(this.value)) {
+        residentialFields.style.display = "block";
+        commercialFields.style.display = "none";
+      } else if (commercialServices.includes(this.value)) {
+        residentialFields.style.display = "none";
+        commercialFields.style.display = "block";
       } else {
-        counter.textContent = target + suffix;
-      }
-    };
-
-    update();
-  };
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting && !entry.target.classList.contains("counted")) {
-        entry.target.classList.add("counted");
-        runCounter(entry.target);
+        residentialFields.style.display = "none";
+        commercialFields.style.display = "none";
       }
     });
-  }, { threshold: 0.5 });
+  }
 
-  counters.forEach(counter => observer.observe(counter));
+  const businessType = document.getElementById("businessType");
+  const otherBusinessField = document.getElementById("otherBusinessField");
 
-});
+  if (businessType && otherBusinessField) {
+    businessType.addEventListener("change", function () {
+      otherBusinessField.style.display = this.value === "other" ? "block" : "none";
+    });
+  }
 
+  /* Reveal animations */
+  const reveals = document.querySelectorAll(".reveal");
 
-// review section of the code
+  if (reveals.length > 0) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("active");
+        }
+      });
+    });
 
-const reviews = [
-    {
+    reveals.forEach(el => observer.observe(el));
+  }
+
+  /* Mini contact buttons */
+  document.querySelectorAll(".person-btn").forEach(btn => {
+    btn.addEventListener("click", function () {
+      const options = this.nextElementSibling;
+      if (options) {
+        options.style.display = options.style.display === "flex" ? "none" : "flex";
+      }
+    });
+  });
+
+  /* Counters */
+  const counters = document.querySelectorAll(".counter");
+
+  if (counters.length > 0) {
+    const runCounter = (counter) => {
+      const target = Number(counter.dataset.target);
+      const suffix = counter.dataset.suffix || "";
+      let current = 0;
+      const increment = target / 60;
+
+      const update = () => {
+        current += increment;
+
+        if (current < target) {
+          counter.textContent = Math.ceil(current) + suffix;
+          requestAnimationFrame(update);
+        } else {
+          counter.textContent = target + suffix;
+        }
+      };
+
+      update();
+    };
+
+    const counterObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && !entry.target.classList.contains("counted")) {
+          entry.target.classList.add("counted");
+          runCounter(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    counters.forEach(counter => counterObserver.observe(counter));
+  }
+
+  /* Reviews */
+  const reviewsContainer = document.getElementById("reviewsContainer");
+  const nextBtn = document.getElementById("nextReviews");
+  const prevBtn = document.getElementById("prevReviews");
+
+  if (reviewsContainer && nextBtn && prevBtn) {
+    const reviews = [
+      {
         text: "Simply Jens did an amazing job. Every room feels brighter and fresher! Highly recommended!",
         name: "Client",
         link: "https://share.google/M2wn4FrmEMrD9HuFE"
-    },
-    {
+      },
+      {
         text: "Very professional and detailed. The place looked spotless when they were done.",
         name: "Client",
         link: "https://share.google/M2wn4FrmEMrD9HuFE"
-    },
-    {
+      },
+      {
         text: "Reliable, friendly, and easy to work with. I would definitely book again.",
         name: "Client",
         link: "https://share.google/M2wn4FrmEMrD9HuFE"
-    },
-    {
-        text: "Amazing service and great attention to detail. My home looked beautiful after the cleaning.",
-        name: "Client",
-        link: "https://share.google/M2wn4FrmEMrD9HuFE"
-    },
-    {
-        text: "They were on time, professional, and left everything spotless.",
-        name: "Client",
-        link: "https://share.google/M2wn4FrmEMrD9HuFE"
-    },
-    {
-        text: "Super happy with the results. I will definitely be booking again.",
-        name: "Client",
-        link: "https://share.google/M2wn4FrmEMrD9HuFE"
-    },
-    {
-        text: "Excellent communication and very thorough cleaning.",
-        name: "Client",
-        link: "https://share.google/M2wn4FrmEMrD9HuFE"
-    },
-    {
-        text: "Friendly team and amazing results. The whole place felt fresh and clean.",
-        name: "Client",
-        link: "https://share.google/M2wn4FrmEMrD9HuFE"
-    },
-    {
-        text: "Highly recommend Simply Jens Cleaning. Great experience from start to finish.",
-        name: "Client",
-        link: "https://share.google/M2wn4FrmEMrD9HuFE"
-    }
-];
+      }
+    ];
 
-const reviewsContainer = document.getElementById("reviewsContainer");
-const nextBtn = document.getElementById("nextReviews");
-const prevBtn = document.getElementById("prevReviews");
+    let currentIndex = 0;
+    const reviewsPerPage = 3;
 
-let currentIndex = 0;
-const reviewsPerPage = 3;
+    function renderReviews() {
+      reviewsContainer.innerHTML = "";
 
-function renderReviews() {
-    reviewsContainer.innerHTML = "";
+      const visibleReviews = reviews.slice(currentIndex, currentIndex + reviewsPerPage);
 
-    const visibleReviews = reviews.slice(currentIndex, currentIndex + reviewsPerPage);
-
-    visibleReviews.forEach((review, index) => {
+      visibleReviews.forEach(review => {
         const bubble = document.createElement("div");
         bubble.className = "bubble";
 
         bubble.innerHTML = `
-            <div class="reviews">
-                <div class="review-stars">★★★★★</div>
-                <p class="text_reviews">"${review.text}"</p>
-                <p class="review-name">– ${review.name}</p>
-                <a href="${review.link}" target="_blank" class="review-link">Read More</a>
-            </div>
+          <div class="reviews">
+            <div class="review-stars">★★★★★</div>
+            <p class="text_reviews">"${review.text}"</p>
+            <p class="review-name">– ${review.name}</p>
+            <a href="${review.link}" target="_blank" class="review-link">Read More</a>
+          </div>
         `;
 
         reviewsContainer.appendChild(bubble);
-    });
+      });
 
-    prevBtn.disabled = currentIndex === 0;
-    nextBtn.disabled = currentIndex + reviewsPerPage >= reviews.length;
+      prevBtn.disabled = currentIndex === 0;
+      nextBtn.disabled = currentIndex + reviewsPerPage >= reviews.length;
+    }
 
-    prevBtn.style.opacity = currentIndex === 0 ? "0.5" : "1";
-    nextBtn.style.opacity = currentIndex + reviewsPerPage >= reviews.length ? "0.5" : "1";
-}
-
-nextBtn.addEventListener("click", () => {
-    if (currentIndex + reviewsPerPage < reviews.length) {
+    nextBtn.addEventListener("click", () => {
+      if (currentIndex + reviewsPerPage < reviews.length) {
         currentIndex += reviewsPerPage;
         renderReviews();
-    }
-});
+      }
+    });
 
-prevBtn.addEventListener("click", () => {
-    if (currentIndex - reviewsPerPage >= 0) {
+    prevBtn.addEventListener("click", () => {
+      if (currentIndex - reviewsPerPage >= 0) {
         currentIndex -= reviewsPerPage;
         renderReviews();
-    }
-});
+      }
+    });
 
-renderReviews();
+    renderReviews();
+  }
 
-// payment trusted section of the code
-
-const revealElements = document.querySelectorAll(".reveal");
-
-const revealOnScroll = () => {
-  revealElements.forEach(el => {
-    const rect = el.getBoundingClientRect();
-
-    if (rect.top < window.innerHeight - 100) {
-      el.classList.add("active");
-    }
-  });
-};
-
-window.addEventListener("scroll", revealOnScroll);
-
-/* FAQ section */
-
-document.addEventListener("DOMContentLoaded", function () {
-  const faqs = document.querySelectorAll(".faq");
-
-  faqs.forEach(function (faq) {
+  /* FAQ */
+  document.querySelectorAll(".faq").forEach(faq => {
     faq.addEventListener("click", function () {
       this.classList.toggle("active");
 
       const response = this.nextElementSibling;
+
+      if (!response) return;
 
       if (response.style.maxHeight) {
         response.style.maxHeight = null;
@@ -234,73 +180,49 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
-});
 
+  /* Business Hours */
+  const status = document.getElementById("businessStatus");
+  const hours = document.getElementById("businessHoursText");
+  const dot = document.querySelector(".status-dot");
 
-// footer of the code 
-
-/* Business Hours */
-
-const status = document.getElementById("businessStatus");
-const hours = document.getElementById("businessHoursText");
-const dot = document.querySelector(".status-dot");
-
-if (status && hours && dot) {
-
+  if (status && hours && dot) {
     const now = new Date();
-
     const currentTime = now.getHours() + now.getMinutes() / 60;
-
-    const openTime = 9.5;   // 9:30 AM
-    const closeTime = 20.5; // 8:30 PM
+    const openTime = 9.5;
+    const closeTime = 20.5;
 
     if (currentTime >= openTime && currentTime < closeTime) {
-
-        status.textContent = "🟢 Open Now";
-        hours.textContent = "Until 8:30 PM • Same-Day Response";
-
-        dot.style.background = "#22c55e";
-
+      status.textContent = "🟢 Open Now";
+      hours.textContent = "Until 8:30 PM • Same-Day Response";
+      dot.style.background = "#22c55e";
     } else {
-
-        status.textContent = "🔴 Closed";
-
-        if (currentTime < openTime) {
-            hours.textContent = "Opens Today at 9:30 AM";
-        } else {
-            hours.textContent = "Opens Tomorrow at 9:30 AM";
-        }
-
-        dot.style.background = "#ef4444";
+      status.textContent = "🔴 Closed";
+      hours.textContent = currentTime < openTime
+        ? "Opens Today at 9:30 AM"
+        : "Opens Tomorrow at 9:30 AM";
+      dot.style.background = "#ef4444";
     }
+  }
 
-}
-
-// pop-up code 
-
-
-window.addEventListener("load", function () {
+  /* Popup */
   const popup = document.getElementById("promoPopup");
   const closeBtn = document.getElementById("closePopup");
 
-  setTimeout(function () {
-    popup.style.display = "flex";
-  }, 2000);
+  if (popup && closeBtn) {
+    setTimeout(function () {
+      popup.style.display = "flex";
+    }, 2000);
 
-  closeBtn.addEventListener("click", function () {
-    popup.style.display = "none";
-  });
-
-  popup.addEventListener("click", function (e) {
-    if (e.target === popup) {
+    closeBtn.addEventListener("click", function () {
       popup.style.display = "none";
-    }
-  });
+    });
+
+    popup.addEventListener("click", function (e) {
+      if (e.target === popup) {
+        popup.style.display = "none";
+      }
+    });
+  }
+
 });
-
-// prevent from copying code from the website
-
-document.addEventListener('contextmenu', event => {
-    event.preventDefault();
-});
-
