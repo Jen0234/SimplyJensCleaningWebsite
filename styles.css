@@ -2069,19 +2069,17 @@ ul.promise-list {
 }
 
 .faq {
-  background-color: #fff;
+  background-color: var(--color-second);
   color: var(--color-third);
   cursor: pointer;
   padding: 18px 50px 18px 18px;
   width: 100%;
-  border: 1px solid rgba(29, 67, 85, 0.12);
   text-align: left;
   outline: none;
   font-size: 15px;
   font-weight: 700;
   transition: 0.3s ease;
   position: relative;
-  border-radius: 12px;
 }
 
 .faq:hover,
