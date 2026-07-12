@@ -78,100 +78,1013 @@ gtag('config', 'G-M1043HBW8K');
   </div>
 </nav>  
 </header>
-<section class="contact_section">
-   <div class="cleaning-form-container">
-    <h2>✨ Book a Sparkle Session!</h2>
-    <form action="#" method="post">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <input type="tel" name="phone" placeholder="Your Phone Number" required>
-        <input type="text" name="address" placeholder="Service Address" required>
-        <input type="text" name="city" placeholder="City" required>
-        <input type="text" name="postal_code" placeholder="Postal Code" required> 
-        <input type="text" name="province" placeholder="Province" required>
-        <input type="text" name="country" placeholder="Country" required>
-        <input type="text" name="preferred_time" placeholder="Preferred Time (e.g., Morning, Afternoon, Evening)" required>
-          <input type="text" name="additional_info" placeholder="Additional Information (e.g., pets, parking, access instructions)"></input>
-          <input type="text" name="referral_source" placeholder="How did you hear about us?"></input>
-          <input type="text" name="bed" placeholder="how many beds?"></input>
-          <input type="text" name="bath" placeholder="how many baths?"></input>
-          <input type="text" name="sqft" placeholder="approximate square footage?"></input>
-          <input type="text" name="floors" placeholder="how many floors?"></input>
-          <input type="text" name="pets" placeholder="any pets?"></input>
-          <input type="text" name="allergies" placeholder="any allergies?"></input>
-          <input type="text" name="cleaning_frequency" placeholder="how often do you want cleaning?"></input>
-          <input type="text" name="last_cleaned" placeholder="when was the last time your home was professionally cleaned?"></input>
-        <select name="service">
-            <option value="" disabled selected>Select Service</option>
-            <option value="residential">🏡 Residential Cleaning</option>
-            <option value="deep">🧼 Deep Cleaning</option>
-            <option value="move">📦 Move-in/Move-out</option>
-            <option value="com"> 🏢 Commercial Cleaning</option>
-            <option value="airbnb">🏠 Airbnb/Short-Term Rental</option>
-             <option value="post">🛠 Post-Construction Cleaning</option>
-             <option value="upholstery">🛋 Upholstery Cleaning</option>
-        </select>
-        <input type="date" name="date">
-        <textarea name="message" placeholder="Special requests or notes..."></textarea>
-        <button type="submit">Send Message</button>
-    </form>
+
+<form
+    class="request-quote-form"
+    action="https://formspree.io/f/mdaqnbav"
+    method="POST"
+    enctype="multipart/form-data">
+
+    <input
+      type="hidden"
+      name="_next"
+      value="https://www.simplyjenscleaning.com/thank-you.html">
+
+    <!-- Rest of your form -->
+
+<main class="quote-page">
+
+  <section class="quote-hero">
+    <span class="service-label">FREE CLEANING ESTIMATE</span>
+
+    <h1>Request a Cleaning Quote</h1>
+
+    <p>
+      Tell us about your home, rental property, or commercial space.
+      We’ll review your information and contact you with a personalized,
+      no-obligation quote.
+    </p>
+
+    <div class="quote-trust">
+      <span>🛡 Fully Insured</span>
+      <span>🐾 Pet-Friendly</span>
+      <span>📍 Ottawa & Gatineau</span>
+      <span>⚡ Same-Day Response</span>
+    </div>
+  </section>
+
+
+  <section class="request-quote-section">
+
+    <div class="request-quote-card">
+
+      <div class="quote-form-heading">
+        <span class="service-label">LET’S GET STARTED</span>
+        <h2>Tell Us About Your Cleaning Needs</h2>
+        <p>
+          Fields marked with an asterisk are required.
+        </p>
+      </div>
+
+      <form
+        class="request-quote-form"
+        action="#"
+        method="post"
+        enctype="multipart/form-data"
+      >
+
+        <!-- CONTACT INFORMATION -->
+
+        <fieldset>
+          <legend>Contact Information</legend>
+
+          <div class="quote-form-grid">
+
+            <div class="quote-form-group">
+              <label for="fullName">Full Name *</label>
+              <input
+                type="text"
+                id="fullName"
+                name="full_name"
+                autocomplete="name"
+                required
+              >
+            </div>
+
+            <div class="quote-form-group">
+              <label for="email">Email Address *</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                autocomplete="email"
+                required
+              >
+            </div>
+
+            <div class="quote-form-group">
+              <label for="phone">Phone Number *</label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                autocomplete="tel"
+                required
+              >
+            </div>
+
+            <div class="quote-form-group">
+              <label for="preferredContact">Preferred Contact Method *</label>
+              <select id="preferredContact" name="preferred_contact" required>
+                <option value="">Select one</option>
+                <option value="text">Text</option>
+                <option value="phone">Phone Call</option>
+                <option value="email">Email</option>
+              </select>
+            </div>
+
+          </div>
+        </fieldset>
+
+
+        <!-- SERVICE ADDRESS -->
+
+        <fieldset>
+          <legend>Service Address</legend>
+
+          <div class="quote-form-grid">
+
+            <div class="quote-form-group quote-full-width">
+              <label for="address">Street Address *</label>
+              <input
+                type="text"
+                id="address"
+                name="address"
+                autocomplete="street-address"
+                required
+              >
+            </div>
+
+            <div class="quote-form-group">
+              <label for="city">City *</label>
+              <input
+                type="text"
+                id="city"
+                name="city"
+                autocomplete="address-level2"
+                required
+              >
+            </div>
+
+              <div class="quote-form-group">
+              <label for="Province">Province *</label>
+              <input
+                type="text"
+                id="Province"
+                name="Province"
+                autocomplete="address-level1"
+                required
+              >
+            </div>
+
+            <div class="quote-form-group">
+              <label for="postalCode">Postal Code *</label>
+              <input
+                type="text"
+                id="postalCode"
+                name="postal_code"
+                autocomplete="postal-code"
+                required
+              >
+            </div>
+
+          </div>
+        </fieldset>
+
+        <!-- SERVICE SELECTION -->
+
+<fieldset>
+  <legend>Select Your Cleaning Service</legend>
+
+  <div class="quote-form-grid">
+
+    <div class="quote-form-group quote-full-width">
+      <label for="serviceSelect">What Service Do You Need? *</label>
+
+      <select id="serviceSelect" name="service" required>
+        <option value="">Select a service</option>
+        <option value="standard">Standard Cleaning</option>
+        <option value="deep">Deep Cleaning</option>
+        <option value="move">Move-In / Move-Out Cleaning</option>
+        <option value="housekeeping">Housekeeping</option>
+        <option value="airbnb">Airbnb / Short-Term Rental Cleaning</option>
+        <option value="commercial">Commercial Cleaning</option>
+        <option value="custom">Custom Cleaning</option>
+      </select>
+    </div>
+
+  </div>
+</fieldset>
+
+
+<!-- GENERAL RESIDENTIAL INFORMATION -->
+
+<fieldset
+  id="residentialFields"
+  class="conditional-fields"
+  style="display:none;"
+>
+  <legend>Property Information</legend>
+
+  <div class="quote-form-grid">
+
+    <div class="quote-form-group">
+      <label for="propertyType">Property Type *</label>
+
+      <select id="propertyType" name="property_type">
+        <option value="">Select one</option>
+        <option value="house">House</option>
+        <option value="apartment">Apartment</option>
+        <option value="condo">Condo</option>
+        <option value="townhouse">Townhouse</option>
+        <option value="rental">Rental Property</option>
+      </select>
+    </div>
+
+    <div class="quote-form-group">
+      <label for="squareFootage">Approximate Square Footage</label>
+      <input
+        type="number"
+        id="squareFootage"
+        name="square_footage"
+        min="0"
+      >
+    </div>
+
+    <div class="quote-form-group">
+      <label for="bedrooms">Bedrooms</label>
+      <input
+        type="number"
+        id="bedrooms"
+        name="bedrooms"
+        min="0"
+      >
+    </div>
+
+    <div class="quote-form-group">
+      <label for="bathrooms">Bathrooms</label>
+      <input
+        type="number"
+        id="bathrooms"
+        name="bathrooms"
+        min="0"
+        step="0.5"
+      >
+    </div>
+
+    <div class="quote-form-group">
+      <label for="floors">Number of Floors</label>
+      <input
+        type="number"
+        id="floors"
+        name="floors"
+        min="0"
+      >
+    </div>
+
+    <div class="quote-form-group">
+      <label for="pets">Are There Any Pets?</label>
+      <input
+        type="text"
+        id="pets"
+        name="pets"
+        placeholder="Example: One friendly dog"
+      >
+    </div>
+
+  </div>
+</fieldset>
+
+
+<!-- STANDARD CLEANING QUESTIONS -->
+
+<fieldset
+  id="standardFields"
+  class="conditional-fields"
+  style="display:none;"
+>
+  <legend>Standard Cleaning Details</legend>
+
+  <div class="quote-form-grid">
+
+    <div class="quote-form-group">
+      <label for="standardFrequency">How Often Would You Like Cleaning? *</label>
+
+      <select id="standardFrequency" name="standard_frequency">
+        <option value="">Select one</option>
+        <option value="one-time">One-Time</option>
+        <option value="weekly">Weekly</option>
+        <option value="biweekly">Biweekly</option>
+        <option value="three-weeks">Every Three Weeks</option>
+        <option value="monthly">Monthly</option>
+      </select>
+    </div>
+
+    <div class="quote-form-group">
+      <label for="standardLastClean">
+        When Was the Home Last Professionally Cleaned?
+      </label>
+
+      <select id="standardLastClean" name="standard_last_cleaned">
+        <option value="">Select one</option>
+        <option value="less-month">Less Than One Month Ago</option>
+        <option value="one-three-months">One to Three Months Ago</option>
+        <option value="three-six-months">Three to Six Months Ago</option>
+        <option value="over-six-months">More Than Six Months Ago</option>
+        <option value="never">Never Professionally Cleaned</option>
+      </select>
+    </div>
+
+    <div class="quote-form-group quote-full-width">
+      <label for="standardPriorities">Priority Areas or Special Requests</label>
+
+      <textarea
+        id="standardPriorities"
+        name="standard_priority_areas"
+        rows="4"
+        placeholder="Example: bathrooms, kitchen floors, pet hair, dusting..."
+      ></textarea>
+    </div>
+
+  </div>
+</fieldset>
+
+
+<!-- DEEP CLEANING QUESTIONS -->
+
+<fieldset
+  id="deepFields"
+  class="conditional-fields"
+  style="display:none;"
+>
+  <legend>Deep Cleaning Assessment</legend>
+
+  <p class="fieldset-intro">
+    These questions help us determine whether your home needs a regular
+    Deep Cleaning or a Heavy-Duty Deep Cleaning.
+  </p>
+  
+  <div class="quote-form-grid">
+    <div class="quote-form-group quote-full-width">
+  <label for="firstTimeDeepClient">
+    Is This Your First Deep Cleaning With Simply Jens Cleaning? *
+  </label>
+
+  <select
+    id="firstTimeDeepClient"
+    name="first_time_deep_clean_client"
+    required
+  >
+    <option value="">Select one</option>
+    <option value="yes">Yes, I’m a First-Time Client</option>
+    <option value="no">No, I’ve Booked Before</option>
+  </select>
 </div>
 
-<div class="form-group">
+<div
+  id="complimentaryApplianceField"
+  class="quote-form-group quote-full-width"
+  style="display:none;"
+>
+  <label for="complimentaryAppliance">
+    Choose Your Complimentary Appliance Cleaning *
+  </label>
 
-    <label>How can we help you?</label>
+  <select
+    id="complimentaryAppliance"
+    name="complimentary_appliance"
+  >
+    <option value="">Select one</option>
+    <option value="fridge">Inside Fridge Cleaning</option>
+    <option value="oven">Inside Oven Cleaning</option>
+  </select>
 
-    <select name="request_type" required>
-
-        <option value="">Select an option</option>
-
-        <option>Request a Free Quote</option>
-
-        <option>Schedule a Commercial Walkthrough</option>
-
-        <option>General Question</option>
-
-    </select>
-
+  <small>
+    First-time deep-cleaning clients may choose one complimentary appliance:
+    the inside of the fridge or the inside of the oven.
+  </small>
 </div>
 
-<div class="form-group">
+    <div class="quote-form-group">
+      <label for="deepLastClean">
+        When Was the Home Last Professionally Cleaned? *
+      </label>
 
-    <label>What are you looking for?</label>
+      <select
+        id="deepLastClean"
+        name="deep_last_professional_cleaning"
+        class="deep-assessment"
+      >
+        <option value="">Select one</option>
+        <option value="0">Less Than Three Months Ago</option>
+        <option value="1">Three to Six Months Ago</option>
+        <option value="2">Six to Twelve Months Ago</option>
+        <option value="3">More Than One Year Ago</option>
+        <option value="3">Never Professionally Cleaned</option>
+      </select>
+    </div>
 
-    <select name="service_request" required>
+    <div class="quote-form-group">
+      <label for="overallBuildup">Overall Level of Buildup *</label>
 
-        <option value="">Please select</option>
+      <select
+        id="overallBuildup"
+        name="overall_buildup"
+        class="deep-assessment"
+      >
+        <option value="">Select one</option>
+        <option value="0">Light Buildup</option>
+        <option value="1">Moderate Buildup</option>
+        <option value="3">Heavy Buildup</option>
+        <option value="4">Extreme or Long-Neglected Buildup</option>
+      </select>
+    </div>
 
-        <option>Residential Cleaning Quote</option>
+    <div class="quote-form-group">
+      <label for="kitchenGrease">Kitchen Grease and Grime *</label>
 
-        <option>Commercial Cleaning Quote</option>
+      <select
+        id="kitchenGrease"
+        name="kitchen_grease"
+        class="deep-assessment"
+      >
+        <option value="">Select one</option>
+        <option value="0">Little or None</option>
+        <option value="1">Moderate</option>
+        <option value="3">Heavy Grease Buildup</option>
+      </select>
+    </div>
 
-        <option>Commercial Walkthrough</option>
+    <div class="quote-form-group">
+      <label for="bathroomBuildup">
+        Soap Scum, Hard Water, or Bathroom Buildup *
+      </label>
 
-        <option>Move-In / Move-Out Cleaning</option>
+      <select
+        id="bathroomBuildup"
+        name="bathroom_buildup"
+        class="deep-assessment"
+      >
+        <option value="">Select one</option>
+        <option value="0">Little or None</option>
+        <option value="1">Moderate</option>
+        <option value="3">Heavy Buildup</option>
+      </select>
+    </div>
 
-        <option>Deep Cleaning</option>
+    <div class="quote-form-group">
+      <label for="dustLevel">Dust Level *</label>
 
-        <option>Standard Cleaning</option>
+      <select
+        id="dustLevel"
+        name="dust_level"
+        class="deep-assessment"
+      >
+        <option value="">Select one</option>
+        <option value="0">Light Dust</option>
+        <option value="1">Dust on Baseboards and Surfaces</option>
+        <option value="3">Thick Dust Throughout the Home</option>
+      </select>
+    </div>
 
-        <option>Custom Cleaning</option>
+    <div class="quote-form-group">
+      <label for="petHairLevel">Pet Hair or Pet-Related Buildup</label>
 
-    </select>
+      <select
+        id="petHairLevel"
+        name="pet_hair_level"
+        class="deep-assessment"
+      >
+        <option value="">Select one</option>
+        <option value="0">None</option>
+        <option value="1">Light or Moderate</option>
+        <option value="3">Heavy Pet Hair or Buildup</option>
+      </select>
+    </div>
 
-</div>
+    <div class="quote-form-group">
+      <label for="clutterLevel">Is the Home Cluttered?</label>
 
-</section>
+      <select
+        id="clutterLevel"
+        name="clutter_level"
+        class="deep-assessment"
+      >
+        <option value="">Select one</option>
+        <option value="0">No, Surfaces and Floors Are Accessible</option>
+        <option value="1">Some Items Need to Be Moved Around</option>
+        <option value="3">Heavy Clutter Limits Access to Areas</option>
+      </select>
+    </div>
+
+    <div class="quote-form-group">
+      <label for="deepAreas">How Much of the Home Is Affected?</label>
+
+      <select
+        id="deepAreas"
+        name="deep_areas_affected"
+        class="deep-assessment"
+      >
+        <option value="">Select one</option>
+        <option value="0">One or Two Areas</option>
+        <option value="1">Several Rooms</option>
+        <option value="3">Most or All of the Home</option>
+      </select>
+    </div>
+
+    <div class="quote-form-group quote-full-width">
+      <label for="deepDetails">
+        Please Describe the Condition of the Home
+      </label>
+
+      <textarea
+        id="deepDetails"
+        name="deep_cleaning_details"
+        rows="5"
+        placeholder="Tell us about grease, soap scum, dust, pet hair, stains, neglected areas, or anything requiring extra attention."
+      ></textarea>
+    </div>
+
+  </div>
+
+  <input
+    type="hidden"
+    id="deepRecommendationInput"
+    name="deep_cleaning_recommendation"
+    value="Assessment not completed"
+  >
+
+  <div
+    id="deepRecommendation"
+    class="deep-recommendation"
+    aria-live="polite"
+  >
+    Complete the questions above to receive a preliminary service recommendation.
+  </div>
+
+  <p class="assessment-disclaimer">
+    This is only a preliminary assessment. Final service selection and pricing
+    will be confirmed after we review your answers and photos.
+  </p>
+</fieldset>
 
 
+<!-- MOVE-IN / MOVE-OUT QUESTIONS -->
 
-<!-- FINAL CTA -->
+<fieldset
+  id="moveFields"
+  class="conditional-fields"
+  style="display:none;"
+>
+  <legend>Move-In / Move-Out Details</legend>
 
-<section class="home-bg-section">
-  <h2>Bring That Fresh, Clean Feeling Back Home</h2>
-  <p>Professional cleaning you can trust — insured, detailed, reliable, and stress-free.</p>
-  <a href="book/" class="final-say-btn">Book Online</a>
-</section>
+  <div class="quote-form-grid">
+
+    <div class="quote-form-group">
+      <label for="moveType">Cleaning Type *</label>
+
+      <select id="moveType" name="move_type">
+        <option value="">Select one</option>
+        <option value="move-in">Move-In Cleaning</option>
+        <option value="move-out">Move-Out Cleaning</option>
+        <option value="showing">Rental Showing Cleaning</option>
+      </select>
+    </div>
+
+    <div class="quote-form-group">
+      <label for="emptyProperty">Will the Property Be Empty? *</label>
+
+      <select id="emptyProperty" name="property_empty">
+        <option value="">Select one</option>
+        <option value="yes">Yes, Completely Empty</option>
+        <option value="mostly">Mostly Empty</option>
+        <option value="no">No, Furniture or Belongings Remain</option>
+      </select>
+    </div>
+
+    <div class="quote-form-group">
+      <label for="moveDeadline">When Must the Cleaning Be Completed?</label>
+      <input type="datetime-local" id="moveDeadline" name="move_deadline">
+    </div>
+
+    <div class="quote-form-group">
+      <label for="moveCondition">Current Property Condition</label>
+
+      <select id="moveCondition" name="move_property_condition">
+        <option value="">Select one</option>
+        <option value="light">Light Cleaning Needed</option>
+        <option value="moderate">Moderate Buildup</option>
+        <option value="heavy">Heavy Buildup</option>
+        <option value="construction">Construction Dust or Debris</option>
+      </select>
+    </div>
+
+    <div class="quote-form-group quote-full-width">
+      <label>Optional Add-Ons</label>
+
+      <div class="service-checkbox-grid">
+        <label><input type="checkbox" name="move_addons[]" value="windows"> Interior Windows</label>
+        <label><input type="checkbox" name="move_addons[]" value="carpet"> Carpet Cleaning</label>
+        <label><input type="checkbox" name="move_addons[]" value="walls"> Wall Washing</label>
+        <label><input type="checkbox" name="move_addons[]" value="garage"> Garage Cleaning</label>
+        <label><input type="checkbox" name="move_addons[]" value="balcony"> Balcony or Patio</label>
+        <label><input type="checkbox" name="move_addons[]" value="heavy-buildup"> Heavy Buildup Cleaning</label>
+      </div>
+    </div>
+
+  </div>
+</fieldset>
+
+
+<!-- HOUSEKEEPING QUESTIONS -->
+
+<fieldset
+  id="housekeepingFields"
+  class="conditional-fields"
+  style="display:none;"
+>
+  <legend>Housekeeping Plan</legend>
+
+  <div class="quote-form-grid">
+
+    <div class="quote-form-group">
+      <label for="housekeepingFrequency">Preferred Frequency *</label>
+
+      <select id="housekeepingFrequency" name="housekeeping_frequency">
+        <option value="">Select one</option>
+        <option value="weekly">Weekly</option>
+        <option value="biweekly">Biweekly</option>
+        <option value="monthly">Monthly</option>
+        <option value="custom">Custom Schedule</option>
+      </select>
+    </div>
+
+    <div class="quote-form-group quote-full-width">
+      <label>Select the Housekeeping Tasks You Need</label>
+
+      <div class="service-checkbox-grid">
+        <label><input type="checkbox" name="housekeeping_tasks[]" value="cleaning"> General Cleaning</label>
+        <label><input type="checkbox" name="housekeeping_tasks[]" value="dishes"> Dishes</label>
+        <label><input type="checkbox" name="housekeeping_tasks[]" value="laundry"> Laundry and Folding</label>
+        <label><input type="checkbox" name="housekeeping_tasks[]" value="linens"> Bed Making and Linens</label>
+        <label><input type="checkbox" name="housekeeping_tasks[]" value="tidying"> General Tidying</label>
+        <label><input type="checkbox" name="housekeeping_tasks[]" value="groceries"> Grocery Put-Away</label>
+        <label><input type="checkbox" name="housekeeping_tasks[]" value="garbage"> Garbage and Recycling</label>
+        <label><input type="checkbox" name="housekeeping_tasks[]" value="custom"> Other Household Tasks</label>
+      </div>
+    </div>
+
+  </div>
+</fieldset>
+
+
+<!-- AIRBNB QUESTIONS -->
+
+<fieldset
+  id="airbnbFields"
+  class="conditional-fields"
+  style="display:none;"
+>
+  <legend>Airbnb / Short-Term Rental Details</legend>
+
+  <div class="quote-form-grid">
+
+    <div class="quote-form-group">
+      <label for="rentalType">Rental Type</label>
+
+      <select id="rentalType" name="rental_type">
+        <option value="">Select one</option>
+        <option value="airbnb">Airbnb</option>
+        <option value="short-term">Short-Term Rental</option>
+        <option value="vacation">Vacation Rental</option>
+        <option value="showing">Showing Rental</option>
+      </select>
+    </div>
+
+    <div class="quote-form-group">
+      <label for="turnoverFrequency">Approximate Turnovers Per Month</label>
+      <input
+        type="number"
+        id="turnoverFrequency"
+        name="turnovers_per_month"
+        min="0"
+      >
+    </div>
+
+    <div class="quote-form-group">
+      <label for="checkoutTime">Guest Check-Out Time</label>
+      <input type="time" id="checkoutTime" name="checkout_time">
+    </div>
+
+    <div class="quote-form-group">
+      <label for="checkinTime">Guest Check-In Time</label>
+      <input type="time" id="checkinTime" name="checkin_time">
+    </div>
+
+    <div class="quote-form-group">
+      <label for="airbnbLaundry">Is Laundry Required?</label>
+
+      <select id="airbnbLaundry" name="airbnb_laundry">
+        <option value="">Select one</option>
+        <option value="yes-onsite">Yes, On-Site</option>
+        <option value="yes-offsite">Yes, Off-Site</option>
+        <option value="no">No</option>
+      </select>
+    </div>
+
+    <div class="quote-form-group">
+      <label for="customChecklist">Do You Have a Custom Checklist?</label>
+
+      <select id="customChecklist" name="custom_airbnb_checklist">
+        <option value="">Select one</option>
+        <option value="yes">Yes</option>
+        <option value="no">No, Use the Simply Jens Checklist</option>
+      </select>
+    </div>
+
+  </div>
+</fieldset>
+
+
+<!-- COMMERCIAL QUESTIONS -->
+
+<fieldset
+  id="commercialFields"
+  class="conditional-fields"
+  style="display:none;"
+>
+  <legend>Commercial Property Information</legend>
+
+  <div class="quote-form-grid">
+
+    <div class="quote-form-group">
+      <label for="businessName">Business Name</label>
+      <input type="text" id="businessName" name="business_name">
+    </div>
+
+    <div class="quote-form-group">
+      <label for="businessType">Business Type</label>
+
+      <select id="businessType" name="business_type">
+        <option value="">Select one</option>
+        <option value="office">Office</option>
+        <option value="retail">Retail Store</option>
+        <option value="apartment-building">Apartment Building</option>
+        <option value="warehouse">Warehouse</option>
+        <option value="clinic">Clinic or Professional Office</option>
+        <option value="restaurant">Restaurant</option>
+        <option value="post-construction">Post-Construction Site</option>
+        <option value="other">Other</option>
+      </select>
+    </div>
+
+    <div
+      id="otherBusinessField"
+      class="quote-form-group quote-full-width"
+      style="display:none;"
+    >
+      <label for="otherBusinessType">Describe the Business Type</label>
+      <input
+        type="text"
+        id="otherBusinessType"
+        name="other_business_type"
+      >
+    </div>
+
+    <div class="quote-form-group">
+      <label for="commercialSqft">Approximate Square Footage</label>
+      <input
+        type="number"
+        id="commercialSqft"
+        name="commercial_square_footage"
+        min="0"
+      >
+    </div>
+
+    <div class="quote-form-group">
+      <label for="commercialFrequency">Preferred Frequency</label>
+
+      <select id="commercialFrequency" name="commercial_frequency">
+        <option value="">Select one</option>
+        <option value="one-time">One-Time</option>
+        <option value="daily">Daily</option>
+        <option value="weekly">Weekly</option>
+        <option value="multiple-weekly">Multiple Times Per Week</option>
+        <option value="biweekly">Biweekly</option>
+        <option value="monthly">Monthly</option>
+        <option value="custom">Custom Schedule</option>
+      </select>
+    </div>
+
+    <div class="quote-form-group">
+      <label for="walkthroughNeeded">Would You Like a Walkthrough?</label>
+
+      <select id="walkthroughNeeded" name="commercial_walkthrough">
+        <option value="">Select one</option>
+        <option value="yes">Yes</option>
+        <option value="no">Not Yet</option>
+        <option value="unsure">Not Sure</option>
+      </select>
+    </div>
+
+  </div>
+</fieldset>
+
+
+<!-- CUSTOM CLEANING QUESTIONS -->
+
+<fieldset
+  id="customFields"
+  class="conditional-fields"
+  style="display:none;"
+>
+  <legend>Customize Your Cleaning</legend>
+
+  <div class="quote-form-grid">
+
+    <div class="quote-form-group quote-full-width">
+      <label for="customBaseService">
+        Which Service Is Your Custom Cleaning Based On? *
+      </label>
+
+      <select id="customBaseService" name="custom_base_service">
+        <option value="">Select one</option>
+        <option value="standard">Standard Cleaning</option>
+        <option value="deep">Deep Cleaning</option>
+        <option value="move">Move-In / Move-Out Cleaning</option>
+        <option value="housekeeping">Housekeeping</option>
+        <option value="airbnb">Airbnb / Short-Term Rental</option>
+        <option value="commercial">Commercial Cleaning</option>
+        <option value="other">Something Else</option>
+      </select>
+    </div>
+
+    <div class="quote-form-group quote-full-width">
+      <label>Select the Tasks You Want Included</label>
+
+      <div class="service-checkbox-grid">
+        <label><input type="checkbox" name="custom_tasks[]" value="kitchen"> Kitchen Cleaning</label>
+        <label><input type="checkbox" name="custom_tasks[]" value="bathrooms"> Bathroom Cleaning</label>
+        <label><input type="checkbox" name="custom_tasks[]" value="dusting"> Detailed Dusting</label>
+        <label><input type="checkbox" name="custom_tasks[]" value="floors"> Vacuuming and Mopping</label>
+        <label><input type="checkbox" name="custom_tasks[]" value="baseboards"> Baseboards</label>
+        <label><input type="checkbox" name="custom_tasks[]" value="appliances"> Appliance Cleaning</label>
+        <label><input type="checkbox" name="custom_tasks[]" value="windows"> Interior Windows</label>
+        <label><input type="checkbox" name="custom_tasks[]" value="laundry"> Laundry</label>
+        <label><input type="checkbox" name="custom_tasks[]" value="dishes"> Dishes</label>
+        <label><input type="checkbox" name="custom_tasks[]" value="tidying"> Tidying and Organization</label>
+        <label><input type="checkbox" name="custom_tasks[]" value="carpet"> Carpet Cleaning</label>
+        <label><input type="checkbox" name="custom_tasks[]" value="other"> Other Tasks</label>
+      </div>
+    </div>
+
+    <div class="quote-form-group quote-full-width">
+      <label for="customInstructions">
+        Describe Exactly What You Would Like Us to Do *
+      </label>
+
+      <textarea
+        id="customInstructions"
+        name="custom_cleaning_instructions"
+        rows="6"
+        placeholder="Please list the rooms, areas, tasks, current condition, and anything you do not want included."
+      ></textarea>
+    </div>
+
+  </div>
+
+  <div class="custom-cleaning-note">
+    Custom cleaning requests are reviewed before pricing. If the request includes
+    extensive buildup or restoration-level work, we may recommend Heavy-Duty
+    Deep Cleaning instead.
+  </div>
+</fieldset>
+       
+        <!-- APPOINTMENT -->
+
+        <fieldset>
+          <legend>Preferred Appointment</legend>
+
+          <div class="quote-form-grid">
+
+            <div class="quote-form-group">
+              <label for="preferredDate">Preferred Date</label>
+              <input
+                type="date"
+                id="preferredDate"
+                name="preferred_date"
+              >
+            </div>
+
+            <div class="quote-form-group">
+              <label for="preferredTime">Preferred Time</label>
+
+              <select id="preferredTime" name="preferred_time">
+                <option value="">Select one</option>
+                <option value="morning">Morning</option>
+                <option value="afternoon">Afternoon</option>
+                <option value="evening">Evening</option>
+                <option value="flexible">Flexible</option>
+              </select>
+            </div>
+
+          </div>
+        </fieldset>
+
+
+        <!-- PHOTOS AND NOTES -->
+
+        <fieldset>
+          <legend>Photos and Additional Details</legend>
+
+          <div class="quote-form-group">
+            <label for="quotePhotos">
+              Upload Photos
+              <span class="optional-text">(Optional)</span>
+            </label>
+
+            <input
+              type="file"
+              id="quotePhotos"
+              name="quote_photos[]"
+              accept="image/*"
+              multiple
+            >
+
+            <small>
+              Photos can help us provide a more accurate quote.
+            </small>
+          </div>
+
+          <div class="quote-form-group">
+            <label for="message">Tell Us About Your Cleaning Needs *</label>
+
+            <textarea
+              id="message"
+              name="message"
+              rows="6"
+              placeholder="Please describe the condition of the property, priority areas, parking, access instructions, allergies, or special requests."
+              required
+            ></textarea>
+          </div>
+
+          <div class="quote-form-group">
+            <label for="referralSource">How Did You Hear About Us?</label>
+
+            <select id="referralSource" name="referral_source">
+              <option value="">Select one</option>
+              <option value="google">Google</option>
+              <option value="facebook">Facebook</option>
+              <option value="instagram">Instagram</option>
+              <option value="kijiji">Kijiji</option>
+              <option value="referral">Friend or Client Referral</option>
+              <option value="vehicle">Saw Our Business Information</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+        </fieldset>
+
+
+        <!-- AGREEMENT -->
+
+        <div class="quote-agreements">
+
+          <label class="quote-checkbox">
+            <input type="checkbox" name="information_accuracy" required>
+
+            <span>
+              I confirm that the information provided is accurate. I understand
+              that pricing may change if the condition or size of the property
+              differs significantly from the information submitted.
+            </span>
+          </label>
+
+          <label class="quote-checkbox">
+            <input type="checkbox" name="policy_agreement" required>
+
+            <span>
+              I have read and agree to the
+              <a href="terms-and-conditions.html" target="_blank">
+                Terms & Conditions
+              </a>,
+              <a href="privacy-policy.html" target="_blank">
+                Privacy Policy
+              </a>, and
+              <a href="cancellation-rescheduling-policy.html" target="_blank">
+                Cancellation & Rescheduling Policy
+              </a>.
+            </span>
+          </label>
+
+        </div>
+
+
+        <button type="submit" class="quote-submit-btn">
+          Submit Quote Request
+        </button>
+
+        <p class="quote-response-note">
+          We’ll review your request and contact you as soon as possible.
+          Submitting this form does not automatically confirm an appointment.
+        </p>
+
+      </form>
+
+    </div>
+
+  </section>
+
+</main>
 
 <!-- FOOTER -->
 
@@ -280,7 +1193,8 @@ gtag('config', 'G-M1043HBW8K');
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
-<script src="sjc.js"></script>
+<script src="js/sjc.js"></script>
+<script src="js/quote.js"></script>
 
 </body>
     </html>
