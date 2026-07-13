@@ -281,89 +281,7 @@ document.addEventListener("DOMContentLoaded", function () {
     );
   });
 
-
-  /* =========================================
-     PHOTO PREVIEW
-  ========================================= */
-
-  const photoUpload =
-    document.getElementById("quotePhotos");
-
-  const photoPreview =
-    document.getElementById("photoPreview");
-
-
-  if (photoUpload && photoPreview) {
-    photoUpload.addEventListener(
-      "change",
-      function () {
-        photoPreview.innerHTML = "";
-
-        const files = Array.from(this.files);
-
-        if (files.length === 0) {
-          return;
-        }
-
-        const validFiles = files.filter(function (file) {
-          return (
-            file.type === "image/jpeg" ||
-            file.type === "image/png" ||
-            file.type === "image/webp"
-          );
-        });
-
-        if (validFiles.length === 0) {
-          photoPreview.innerHTML = `
-            <p class="photo-preview-message">
-              Please upload JPG, PNG, or WebP images.
-            </p>
-          `;
-
-          return;
-        }
-
-        validFiles.forEach(function (file) {
-          const reader = new FileReader();
-
-          reader.addEventListener(
-            "load",
-            function (event) {
-              const previewItem =
-                document.createElement("div");
-
-              previewItem.className =
-                "preview-item";
-
-              const image =
-                document.createElement("img");
-
-              image.src = event.target.result;
-              image.alt = `Preview of ${file.name}`;
-              image.className = "preview-image";
-
-              const fileName =
-                document.createElement("span");
-
-              fileName.className =
-                "preview-file-name";
-
-              fileName.textContent = file.name;
-
-              previewItem.appendChild(image);
-              previewItem.appendChild(fileName);
-              photoPreview.appendChild(previewItem);
-            }
-          );
-
-          reader.readAsDataURL(file);
-        });
-      }
-    );
-  }
-
-
-  /* =========================================
+   /* =========================================
      CUSTOM CLEANING VALIDATION
   ========================================= */
 
@@ -523,3 +441,160 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
+/* =========================================
+   PRESELECT SERVICE FROM PAGE LINKS
+========================================= */
+
+const requestType = document.getElementById("requestType");
+const pageParameters = new URLSearchParams(window.location.search);
+
+const requestedService = pageParameters.get("service");
+const requestedAction = pageParameters.get("request");
+
+const validServices = [
+  "standard",
+  "deep",
+  "move",
+  "housekeeping",
+  "airbnb",
+  "commercial",
+  "custom"
+];
+
+const validRequests = [
+  "quote",
+  "walkthrough",
+  "custom",
+  "question"
+];
+
+if (
+  serviceSelect &&
+  requestedService &&
+  validServices.includes(requestedService)
+) {
+  serviceSelect.value = requestedService;
+
+  /* Run the existing service-selection code */
+  serviceSelect.dispatchEvent(
+    new Event("change", { bubbles: true })
+  );
+}
+
+if (
+  requestType &&
+  requestedAction &&
+  validRequests.includes(requestedAction)
+) {
+  requestType.value = requestedAction;
+}
+
+/* Set a sensible request type when only a service is provided */
+
+if (
+  requestType &&
+  requestedService &&
+  !requestedAction
+) {
+  requestType.value =
+    requestedService === "custom"
+      ? "custom"
+      : "quote";
+}
+
+/* Bring the visitor directly to the form */
+
+if (requestedService || requestedAction) {
+  const quoteFormSection =
+    document.querySelector(".request-quote-section");
+
+  if (quoteFormSection) {
+    setTimeout(function () {
+      quoteFormSection.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+    }, 250);
+  }
+}
+
+
+  /* =========================================
+     PHOTO PREVIEW
+  ========================================= */
+
+  const photoUpload =
+    document.getElementById("quotePhotos");
+
+  const photoPreview =
+    document.getElementById("photoPreview");
+
+
+  if (photoUpload && photoPreview) {
+    photoUpload.addEventListener(
+      "change",
+      function () {
+        photoPreview.innerHTML = "";
+
+        const files = Array.from(this.files);
+
+        if (files.length === 0) {
+          return;
+        }
+
+        const validFiles = files.filter(function (file) {
+          return (
+            file.type === "image/jpeg" ||
+            file.type === "image/png" ||
+            file.type === "image/webp"
+          );
+        });
+
+        if (validFiles.length === 0) {
+          photoPreview.innerHTML = `
+            <p class="photo-preview-message">
+              Please upload JPG, PNG, or WebP images.
+            </p>
+          `;
+
+          return;
+        }
+
+        validFiles.forEach(function (file) {
+          const reader = new FileReader();
+
+          reader.addEventListener(
+            "load",
+            function (event) {
+              const previewItem =
+                document.createElement("div");
+
+              previewItem.className =
+                "preview-item";
+
+              const image =
+                document.createElement("img");
+
+              image.src = event.target.result;
+              image.alt = `Preview of ${file.name}`;
+              image.className = "preview-image";
+
+              const fileName =
+                document.createElement("span");
+
+              fileName.className =
+                "preview-file-name";
+
+              fileName.textContent = file.name;
+
+              previewItem.appendChild(image);
+              previewItem.appendChild(fileName);
+              photoPreview.appendChild(previewItem);
+            }
+          );
+
+          reader.readAsDataURL(file);
+        });
+      }
+    );
+  }
